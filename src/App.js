@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Header from './Components/Header';
 import StudentList from './Components/StudentList';
 
-
-function App() {
+const App = () => {
+  //Some data
   const initialStudents = [
     {
       id: 1,
@@ -12,12 +12,11 @@ function App() {
       attendanceHistory: [
         {
           id: 1,
-          date: '2023-08-28',
           attended: 10,
           totalClasses: 12,
           attendancePercentage: ((10 / 12) * 100).toFixed(2),
         },
-        // Add more attendance history entries as needed
+   
       ],
     },
     {
@@ -27,12 +26,10 @@ function App() {
       attendanceHistory: [
         {
           id: 2,
-          date: '2023-08-27',
           attended: 8,
           totalClasses: 10,
           attendancePercentage: ((8 / 10) * 100).toFixed(2),
         },
-        // Add more attendance history entries as needed
       ],
     },
     {
@@ -42,12 +39,10 @@ function App() {
       attendanceHistory: [
         {
           id: 3,
-          date: '2023-08-26',
           attended: 12,
           totalClasses: 12,
           attendancePercentage: ((12 / 12) * 100).toFixed(2),
         },
-        // Add more attendance history entries as needed
       ],
     },
     {
@@ -57,12 +52,10 @@ function App() {
       attendanceHistory: [
         {
           id: 4,
-          date: '2023-08-25',
           attended: 9,
           totalClasses: 11,
           attendancePercentage: ((9 / 11) * 100).toFixed(2),
         },
-        // Add more attendance history entries as needed
       ],
     },
     {
@@ -72,12 +65,10 @@ function App() {
       attendanceHistory: [
         {
           id: 5,
-          date: '2023-08-24',
           attended: 7,
           totalClasses: 9,
           attendancePercentage: ((7 / 9) * 100).toFixed(2),
         },
-        // Add more attendance history entries as needed
       ],
     },
     {
@@ -87,12 +78,10 @@ function App() {
       attendanceHistory: [
         {
           id: 6,
-          date: '2023-08-23',
           attended: 11,
           totalClasses: 12,
           attendancePercentage: ((11 / 12) * 100).toFixed(2),
         },
-        // Add more attendance history entries as needed
       ],
     },
     {
@@ -102,12 +91,10 @@ function App() {
       attendanceHistory: [
         {
           id: 7,
-          date: '2023-08-22',
           attended: 6,
           totalClasses: 8,
           attendancePercentage: ((6 / 8) * 100).toFixed(2),
         },
-        // Add more attendance history entries as needed
       ],
     },
     {
@@ -117,15 +104,12 @@ function App() {
       attendanceHistory: [
         {
           id: 8,
-          date: '2023-08-21',
           attended: 10,
           totalClasses: 10,
           attendancePercentage: ((10 / 10) * 100).toFixed(2),
         },
-        // Add more attendance history entries as needed
       ],
     },
-    // Add more students as needed
   ];
 
   const [students, setStudents] = useState(initialStudents);

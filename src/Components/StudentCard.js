@@ -1,9 +1,7 @@
-// src/components/StudentCard.js
-import React from 'react';
-
-function StudentCard({ student, onToggleAttendance }) {
+const StudentCard =({ student, onToggleAttendance }) => {
   const handleToggleAttendance = (isPresent) => {
     onToggleAttendance(student.id, isPresent);
+
   };
 
   return (
@@ -29,8 +27,11 @@ function StudentCard({ student, onToggleAttendance }) {
         <ul>
           {student.attendanceHistory.map((entry) => (
             <li key={entry.id}>
-              {entry.date}: {entry.attended} / {entry.totalClasses} ({entry.attendancePercentage}%)
+              Attended/Total Classes: {entry.attended} / {entry.totalClasses} <li>
+              Attendance Percentage : ({entry.attendancePercentage}%)
+                </li> 
             </li>
+            
           ))}
         </ul>
       </div>
